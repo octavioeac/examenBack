@@ -22,32 +22,30 @@ public class Ejercicio5 {
 	public static boolean getBalanceo2(String str) {
 		
 		String s=getRemoveAlfaNumerico(str);
-		boolean bandera=false;
+		boolean bandera=true;
 		
-		Stack<Character> st = new Stack<Character>();
-		for (int i = 0; i < s.length(); ++i) {
-			if ((s.charAt(i) == '(') || (s.charAt(i) == '{') || (s.charAt(i) == '[')) {
-				st.push(s.charAt(i));
-			} else if (st.isEmpty() == false) {
-				switch (s.charAt(i)) {
-				case ']':
-					if (st.pop() != '[') {}
-					break;
-				case '}':
-					if (st.pop() != '{') {}
-					break;
-				case ')':
-					if (st.pop() != '(') {}
-					break;
-				}
-			}
-		}
-		if (st.isEmpty()) {
-			bandera=true;
-		} else
-			bandera=false;
+		
+		 Stack<Character> stack  = new Stack<Character>();
+	        for(int i = 0; i < s.length(); i++) {
+	            char c = s.charAt(i);
+	            if(c == '[' || c == '(' || c == '{' ) {     
+	                stack.push(c);
+	            } else if(c == ']') {
+	                if(stack.isEmpty() || stack.pop() != '[') {
+	                    return false;
+	                }
+	            } else if(c == ')') {
+	                if(stack.isEmpty() || stack.pop() != '(') {
+	                    return false;
+	                }           
+	            } else if(c == '}') {
+	                if(stack.isEmpty() || stack.pop() != '{') {
+	                    return false;
+	                }
+	            }
 
-		return bandera;
+	        }
+	        return stack.isEmpty();
 
 	}
 
