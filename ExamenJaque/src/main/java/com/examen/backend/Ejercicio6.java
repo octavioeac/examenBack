@@ -49,17 +49,7 @@ public class Ejercicio6 {
 	    } 
 	       
 	
-	    public static void main(String[] args) throws ParseException 
-	    { 
-	    	
-	
-	    String[] horaInicial={"11:00","12:00", "14:30"};	
-	    String[] horafinal={"14:00","15:00", "16:30"};	
 
-
-	    int n = horaInicial.length; 
-	    System.out.println("El número de salones para las "+n+" de actividades son : "+getNumeroSalones(horaInicial, horafinal, n)); 
-	    } 
 	
 	
 }
