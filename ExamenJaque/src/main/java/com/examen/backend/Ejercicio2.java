@@ -22,11 +22,6 @@ public class Ejercicio2 {
 	}
 	
 	
-	public static void main(String[] args) {
-		
-		Ejercicio2 eje2= new Ejercicio2();
-		System.out.println( eje2.getSumatoriaLimites(3, 6));
 
-	}
 
 }

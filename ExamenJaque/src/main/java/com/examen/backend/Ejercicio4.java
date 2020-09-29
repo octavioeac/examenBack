@@ -32,17 +32,6 @@ public class Ejercicio4 {
 		
 	}
 	
-	public static void main(String args[]){
-		
-		Ejercicio4 ejee=new Ejercicio4();
-		int[] obj = ejee.getRemueveDuplicados(new int[]{
-				2,3,4,5,6,7,2,2,4,5,6,4,9
-	
-	});
-		
-		 System.out.println(Arrays.toString(obj));
 
-		
-		}
 
 }
