@@ -8,6 +8,7 @@ class Ejercicio6Test {
 
 	@Test
 	void testGetNumeroSalones() {
+		
 		 String[] horaInicial={"11:00","12:00", "14:30"};	
 		    String[] horafinal={"14:00","15:00", "16:30"};	
 

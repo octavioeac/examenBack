@@ -11,85 +11,42 @@ import java.util.function.IntUnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-
-
 public class Ejercicio1 {
 
 	public Ejercicio1() {
-	
+
 	}
-	
-	
-	public int[] getSubarreglo(int[] arreglo){
-		
-		
-		
-		List<Integer> lista= Arrays.stream(arreglo)
-	    		.boxed()
-	    		.collect(Collectors.toList());
-		
-		
-	    int max=Collections.max(lista);
-	    int min=Collections.min(lista);
-	    
-		
-		
-	  
-	    List <Integer> k = IntStream.range(0, lista.size() - 1)
-	    	.filter((i) ->lista.get(i+1) - lista.get(i)>1 
-	    			 
-	    			)
-	        .mapToObj(lista::get)
-	        .collect(Collectors.toList());
-	   
-	    	System.out.println(k.toString());
-		return null;
-		
-	
-	
-	}
-	
-	public static int[] consecutiveNumbers(int a[], int n) {
-		
-		List<int[]> arreglos= new ArrayList<>();
-		
-		String str="";
-		
-		for(int i=0; i<a.length ; i++){
-			System.out.println(a[i]);
-			
-			if(a[i]<a[i+1]){
-				str+=a[i];
-				System.out.println(str);
+
+	public List<Integer> getSubarreglo(int[] enteros) {
+
+		ArrayList<Integer> enteroList = new ArrayList<Integer>();
+		Arrays.stream(enteros).forEach(i -> enteroList.add(i));
+
+		int counter = 0;
+		for (int x = 0; x < enteroList.size() - 2; ++x) {
+
+			if (enteroList.get(x) < enteroList.get(x + 1) && enteroList.get(x) < enteroList.get(x + 2)) {
+				enteroList.remove(x);
+				enteroList.remove(x);
+				enteroList.remove(x);
+				counter++;
+				x = -1;
+			} else {
+
 			}
-			
-			
-		}
-		
-		
-		
-		return null;
 
-		
-		
-		
+			if (enteroList.isEmpty())
+				break;
 		}
-	
-	
-	public static void main(String args[]){
-		
-		int[] arr= {
-		  		3,2,5,9,1,4,
-		};
-		Ejercicio1 ejercicio1 =new Ejercicio1();
-		//ejercicio1.getSubarreglo(arr);
-		ejercicio1.consecutiveNumbers(arr, 0);
-	
 
-		
-		}
-		
-	
-	
+		List<Integer> list = Arrays.stream(enteros).boxed().collect(Collectors.toList());
+
+		list.removeAll(enteroList);
+		System.out.println(list.toString());
+
+		return list;
+	}
+
+
 
 }

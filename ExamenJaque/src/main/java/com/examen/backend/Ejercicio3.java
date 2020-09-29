@@ -8,6 +8,7 @@ public class Ejercicio3 {
 
 	public Ejercicio3() {
 		
+		
 	}
 	
 	public static int getKGrande(List<Integer> ints, int k)

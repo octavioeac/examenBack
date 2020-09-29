@@ -2,7 +2,7 @@ package com.examen.backend;
 
 public class Ejercicio2 {
 
-	public Ejercicio2() {
+	public Ejercicio2() { 
 		
 	}
 

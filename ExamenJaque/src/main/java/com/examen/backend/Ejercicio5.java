@@ -50,12 +50,7 @@ public class Ejercicio5 {
 	}
 
 
-	public static void main(String[] args) {
-		String s = "([)]";
-		System.out.println(getBalanceo2(s));
-		
-	
-	}
+
 
 	
 }

@@ -9,6 +9,7 @@ class Ejercicio2Test {
 	@Test
 	void testGetSumatoriaLimites() {
 		
+		
 		Ejercicio2 eje2= new Ejercicio2();
 		System.out.println( eje2.getSumatoriaLimites(3, 7));
 		int x= eje2.getSumatoriaLimites(3, 6);

@@ -11,6 +11,7 @@ public class Ejercicio6 {
 
 	public Ejercicio6() {
 		
+		
 	}
 	
 	public static long getHora(String hora) {

@@ -8,6 +8,7 @@ class Ejercicio5Test {
 
 	@Test
 	void testGetBalanceoCase1() {
+		
 		String s = "[()1223()]";
 		System.out.println(Ejercicio5.getBalanceo2(s));
 		assertEquals(true, Ejercicio5.getBalanceo2(s));
